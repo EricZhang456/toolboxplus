@@ -18,6 +18,31 @@ Begin VB.Form Main
    ScaleHeight     =   7245
    ScaleWidth      =   11760
    StartUpPosition =   3  '´°¿ÚÈ±Ê¡
+   Begin VB.CommandButton Command1 
+      Caption         =   "Typer"
+      Height          =   255
+      Left            =   6720
+      TabIndex        =   4
+      Top             =   2160
+      Width           =   615
+   End
+   Begin VB.CommandButton IEFRAME1 
+      Caption         =   "THE POWERFUL INTERNET!"
+      BeginProperty Font 
+         Name            =   "Comic Sans MS"
+         Size            =   36
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   1935
+      Left            =   120
+      TabIndex        =   3
+      Top             =   1680
+      Width           =   6255
+   End
    Begin VB.CommandButton NORMAL 
       Caption         =   "nORMa1"
       Height          =   255
@@ -31,7 +56,7 @@ Begin VB.Form Main
       Height          =   375
       Left            =   5520
       TabIndex        =   1
-      Top             =   360
+      Top             =   480
       Width           =   495
    End
    Begin VB.Label Label1 
@@ -59,8 +84,18 @@ Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Dim N As Boolean
 
+Private Sub Command1_Click()
+    Main.Hide
+    Typer.Show
+End Sub
+
 Private Sub Form_Load()
     NORMAL.Visible = False
+End Sub
+
+Private Sub IEFRAME1_Click()
+    Main.Hide
+    IEFrameForm.Show
 End Sub
 
 Private Sub Label1_Click()
