@@ -61,11 +61,19 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
+Dim Pro As Boolean
+
 Private Sub Command1_Click()
+    Pro = True
     MsgBox ("sorry pro is dead")
 End Sub
 
 Private Sub StartCommand_Click()
-    Start.Hide
-    Main.Show
+    If Pro = True Then
+        Start.Hide
+        Main.Show
+    Else
+        MsgBox "Your trial of ToolBoxPlus starts.", vbInformation, "ToolBoxPlus"
+        MsgBox "Your trial of ToolBoxPlus ended!", vbCritical, "ToolBoxPlus"
+    End If
 End Sub
