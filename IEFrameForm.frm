@@ -19,6 +19,14 @@ Begin VB.Form IEFrameForm
    ScaleHeight     =   10440
    ScaleWidth      =   12855
    StartUpPosition =   3  '´°¿ÚÈ±Ê¡
+   Begin VB.CommandButton Command6 
+      Caption         =   "main"
+      Height          =   255
+      Left            =   12360
+      TabIndex        =   7
+      Top             =   480
+      Width           =   495
+   End
    Begin VB.CommandButton Command5 
       Caption         =   "Refresh"
       BeginProperty Font 
@@ -169,6 +177,11 @@ End Sub
 
 Private Sub Command5_Click()
     WebBrowser1.Refresh
+End Sub
+
+Private Sub Command6_Click()
+    IEFrameForm.Hide
+    Main.Show
 End Sub
 
 Private Sub Form_Load()
